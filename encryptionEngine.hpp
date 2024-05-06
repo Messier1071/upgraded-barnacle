@@ -13,12 +13,4 @@ public:
     ~EncryptionEngine();
 };
 
-EncryptionEngine::EncryptionEngine(/* args */)
-{
-}
-
-EncryptionEngine::~EncryptionEngine()
-{
-}
-
 #endif

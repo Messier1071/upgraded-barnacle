@@ -6,5 +6,12 @@ todo 4 - regenerate method in engine to recreate table with or without new key
 todo 5 - text to encrypt and decrypt must go through cypher (encryptionEngine is private)
 todo 6 - table generation method is free (lets get creative)
 todo 7 - Menu (pretty if possible)
-
 */
+#include <math.h>
+#include <iostream>
+
+int main(int argc, char const *argv[])
+{
+
+    return 0;
+}

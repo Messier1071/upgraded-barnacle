@@ -1,21 +1,17 @@
 #ifndef ETABLE
 #define ETABLE
+#include <vector>
+
 class EncryptionTable
 {
 private:
     int key;
+    std::vector<int> table;
 
 public:
     EncryptionTable(/* args */);
-    ~EncryptionTable();
+    EncryptionTable(int key);
+    virtual ~EncryptionTable();
 };
 
-EncryptionTable::EncryptionTable(/* args */)
-{
-}
-
-EncryptionTable::~EncryptionTable()
-{
-}
-
-#endif #ifndef ETABLE
+#endif
