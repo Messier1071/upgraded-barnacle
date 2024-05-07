@@ -1,4 +1,5 @@
 #include "encryptionEngine.hpp"
+#include <iostream>
 using namespace std;
 
 EncryptionEngine::EncryptionEngine(int key)
@@ -18,7 +19,7 @@ string EncryptionEngine::encrypt(std::string in)
     for (size_t i = 0; i < in.size(); i++)
     {
         ch = in.at(i);
-        buffer += (char)table->checkTable(ch);
+        buffer += table->checkTable(ch);
     }
 
     return buffer;
@@ -28,11 +29,12 @@ string EncryptionEngine::decrypt(std::string in)
 {
     string buffer;
     char ch = '\0';
-    for (size_t i = 0; i < in.size(); i++)
+        for (size_t i = 0; i < in.size()-1; i++)
     {
         ch = in.at(i);
-        buffer += (char)table->checkTableI(ch);
+        buffer += table->checkTableI(ch);
     }
+    
 
     return buffer;
 }

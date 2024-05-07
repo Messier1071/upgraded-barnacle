@@ -7,7 +7,7 @@ class EncryptionTable
 {
 private:
     int m_key;
-    std::vector<std::pair<int, int>> m_table;
+    std::vector<std::pair<char, char>> m_table;
     void fillTable(int key); //funcao generica para preencher a tabela 
 
 public:
@@ -17,8 +17,8 @@ public:
     void newTable(int key);     // reset de tabela com nova chave
     void newTable();     // reset de tabela com chave padrao
     void toString();            // test dev
-    int checkTable(int num);    // get equivalent 
-    int checkTableI(int num);   // get inverse equivalent    
+    char checkTable(char num);    // get equivalent 
+    char checkTableI(char num);   // get inverse equivalent    
 };
 
 #endif

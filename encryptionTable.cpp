@@ -5,8 +5,6 @@
 EncryptionTable::EncryptionTable() 
 {
     m_key = 12345678;
-    std::pair<int, int> temp;
-
     fillTable(m_key);
 }
 
@@ -40,11 +38,11 @@ void EncryptionTable::newTable(){
  // funcao generica para preencher a tabela
 void EncryptionTable::fillTable(int key){
     
-    std::pair<int, int> temp;
+    std::pair<char, char> temp;
     for (size_t i = 0; i < 256; i++)
     {
         temp.first = i;
-        temp.second = (int)(i*10+key)%256;
+        temp.second = (int)(i+(key))%255;
         m_table.push_back(temp);
     }
 
@@ -60,27 +58,24 @@ void EncryptionTable::toString(){
 }
 
 // get equivalent
-int EncryptionTable::checkTable(int num){    
-    for (size_t i = 0; i < 256; i++)
-    {
-       if (m_table.at(i).first == num)
-       {
-        return m_table.at(i).second;
-       }
-       
-    }
-    return -1;
+char EncryptionTable::checkTable(char num){    
+    int hold = 0;
+    
+        hold = m_table.at(num).second;
+    return hold;
 }
 
 // get inverse
-int EncryptionTable::checkTableI(int num){ 
+char EncryptionTable::checkTableI(char num){ 
+    char hold = '0';
     for (size_t i = 0; i < 256; i++)
     {
        if (m_table.at(i).second == num)
        {
-        return m_table.at(i).first;
+        hold = m_table.at(i).first;
+        break;
        }
        
     }
-    return -1;
+    return hold;
 }   
