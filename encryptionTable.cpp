@@ -48,15 +48,6 @@ void EncryptionTable::fillTable(int key){
 
 }
 
-//funcao para teste
-void EncryptionTable::toString(){
-    for (size_t i = 0; i < 256; i++)
-    {
-        std::cout <<"["<< m_table.at(i).first<<"]"<<"  "<<"["<<m_table.at(i).second<<"]"<<std::endl;
-
-    }
-}
-
 // get equivalent
 char EncryptionTable::checkTable(char num){    
     int hold = 0;

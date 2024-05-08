@@ -1,12 +1,3 @@
-/*
-// 1 - create encryptionTable
-// 2   - criar classe EncryptionEngine (uses encryptionTable) to encrypt and decrypt
-// - encryptionTable must receive the key from Main through Engine
-// 4 - regenerate method in engine to recreate table with or without new key
-// 5 - text to encrypt and decrypt must go through cypher (encryptionEngine is private)
-// 6 - table generation method is free (lets get creative)
-// 7 - Menu (pretty if possible)
-*/
 #include <iostream>
 #include "encryptionTable.hpp"
 #include "encryptionEngine.hpp"
