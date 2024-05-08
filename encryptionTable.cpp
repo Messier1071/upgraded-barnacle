@@ -1,13 +1,6 @@
 #include "encryptionTable.hpp"
 #include "iostream"
 
-// empty constructor
-EncryptionTable::EncryptionTable() 
-{
-    m_key = 12345678;
-    fillTable(m_key);
-}
-
 // constructor with key
 EncryptionTable::EncryptionTable(int key) 
 {
